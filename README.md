@@ -1,4 +1,4 @@
-##🔗 Link Shortening System (LSS)O Link Shortening System (LSS) é um serviço interativo desenvolvido em Python para encurtamento, validação e análise de segurança prévia de URLs. 
+## 🔗 Link Shortening System (LSS)O Link Shortening System (LSS) é um serviço interativo desenvolvido em Python para encurtamento, validação e análise de segurança prévia de URLs. 
 
 O objetivo principal da solução é oferecer uma camada de proteção ao usuário final, analisando a URL contra padrões comuns de engenharia social e phishing antes de processar o encurtamento.
 

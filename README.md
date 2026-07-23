@@ -21,7 +21,8 @@ O projeto foi construído e implantado utilizando padrões modernos do ecossiste
 
 O sistema utiliza o **Streamlit** como camada de apresentação e controlador de estado de sessão, desacoplando a lógica de validação de segurança e integração com provedores externos de encurtamento.
 
-<img width="805" height="443" alt="image" src="https://github.com/user-attachments/assets/4c5683d3-f3d7-4788-a430-458c33160482" />
+<img width="420" height="320" alt="image" src="https://github.com/user-attachments/assets/8be8b708-eca4-4d87-b71a-8d023049fafa" />
+
 
 
 

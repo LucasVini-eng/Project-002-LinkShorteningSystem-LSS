@@ -21,11 +21,9 @@ O projeto foi construído e implantado utilizando padrões modernos do ecossiste
 
 O sistema utiliza o **Streamlit** como camada de apresentação e controlador de estado de sessão, desacoplando a lógica de validação de segurança e integração com provedores externos de encurtamento.
 
-+----------------------------------+------------------------------------+
-|                       Streamlit Frontend (Cloud)                      |
-|  [ Entrada de URL ]  --->  [ Check URL ]  --->  [ Shorten Button ]    |
-+----------------------------------+------------------------------------+
-                                   |
+<img width="805" height="443" alt="image" src="https://github.com/user-attachments/assets/4c5683d3-f3d7-4788-a430-458c33160482" />
+
+
 
 
 

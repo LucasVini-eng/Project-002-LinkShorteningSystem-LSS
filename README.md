@@ -56,11 +56,10 @@ Como o sistema opera no modelo **Server-Side Rendered (SSR)** via WebSockets no 
 * **Payload:** URL original serializada via query parameter.
 
 ## 🛡️ 4. Validação de Segurança e Prevenção de Engenharia Social
-O motor de segurança do LSS atua em **três camadas de análise heurística** para mitigar riscos de phishing, distribuição de binários maliciosos e ataques baseados em engenharia social.
-<img width="620" height="420" alt="image" src="https://github.com/user-attachments/assets/ca013650-ea37-41eb-9c34-758a4f6500f4" />
+O motor de segurança do LSS atua em **três camadas de análise heurística** para mitigar riscos de phishing, distribuição de binários maliciosos e ataques baseados em engenharia social.<br>
+<img width="620" height="420" alt="image" src="https://github.com/user-attachments/assets/ca013650-ea37-41eb-9c34-758a4f6500f4" /><br>
 
-<br>
-### Detalhamento das Camadas de Defesa
+# Detalhamento das Camadas de Defesa
 
 1. **Protocolo de Transport Seguro (`HTTPS`):**
    * Verificação via `urllib.parse.urlparse`. URLs sob o esquema `http://` não criptografado são rejeitadas para evitar ataques *Man-in-the-Middle (MitM)* ou interceptação de credenciais.
@@ -78,8 +77,24 @@ O motor de segurança do LSS atua em **três camadas de análise heurística** p
 
 ## 🔄 5. Transformação de URL Longa para Curta
 
-O ciclo de vida da transformação de um link no sistema segue o padrão **Check-Then-Act**:
+O ciclo de vida da transformação de um link no sistema segue o padrão **Check-Then-Act**: <br>
 [ Long URL ] ➔ [ Input Verification ] ➔ [ State: Verified = True ] ➔ [ API Request ] ➔ [ Short URL ]
+
+### Algoritmo de Transformação Interno
+1. **Sanitização:** A URL inserida é tratada e convertida para caracteres minúsculos na verificação heurística para evitar mutações de bypass (ex: `.EXE` ou `GrAtIs`).
+2. **Controle de Estado Finito:** O botão de geração de link curto permanece oculto/desabilitado até que o `st.session_state.verified_url` seja avaliado como `True`.
+3. **Resolução de Alias:** A biblioteca `pyshorteners` envia a URL validada para a infraestrutura do TinyURL, que aplica um algoritmo de *hashing* de base 62 no banco de dados deles, retornando o alias encurtado no formato `https://tinyurl.com/{hash}`.
+
+---
+
+## 🚀 Como Executar o Projeto
+
+### Rodando Localmente (PyCharm / VS Code)
+
+1. **Clone o repositório:**
+   ```bash
+   git clone [https://github.com/seu-usuario/link-shortener-lss.git](https://github.com/seu-usuario/link-shortener-lss.git)
+   cd link-shortener-lss
 
 
 

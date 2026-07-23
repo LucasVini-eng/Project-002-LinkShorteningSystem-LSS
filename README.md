@@ -57,6 +57,16 @@ Como o sistema opera no modelo **Server-Side Rendered (SSR)** via WebSockets no 
 
 ## 🛡️ 4. Validação de Segurança e Prevenção de Engenharia Social
 
+<img width="620" height="420" alt="image" src="https://github.com/user-attachments/assets/ca013650-ea37-41eb-9c34-758a4f6500f4" />
+
+
+
+
+
+
+
+
+
 O motor de segurança do LSS atua em **três camadas de análise heurística** para mitigar riscos de phishing, distribuição de binários maliciosos e ataques baseados em engenharia social.
 
 
